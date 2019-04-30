@@ -1,0 +1,52 @@
+﻿@model Models.Models.Category
+
+@{
+    ViewBag.Title = "Add Category";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Insert", "Categories", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(c => c.Code)</td>
+            <td>@Html.TextBoxFor(c => c.Code)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Name)</td>
+            <td>@Html.TextBoxFor(c => c.Name)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Add"/>
+            </td>
+        </tr>
+    </table>
+    
+    
+
+
+    
+}
+
+
+@*<div class="modal fade" id="categoryModal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Insert Category</h4>
+        </div>
+
+        <div class="modal-body"></div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>*@
+
+
+

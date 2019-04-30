@@ -1,0 +1,9 @@
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\bin\Debug\BLL.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\bin\Debug\BLL.pdb
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\bin\Debug\DAL.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\bin\Debug\Models.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\bin\Debug\DAL.pdb
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\bin\Debug\Models.pdb
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\obj\Debug\BLL.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\BLL\obj\Debug\BLL.pdb

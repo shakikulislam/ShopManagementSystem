@@ -1,0 +1,5 @@
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\Models\bin\Debug\Models.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\Models\bin\Debug\Models.pdb
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\Models\obj\Debug\Models.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\Models\obj\Debug\Models.pdb
