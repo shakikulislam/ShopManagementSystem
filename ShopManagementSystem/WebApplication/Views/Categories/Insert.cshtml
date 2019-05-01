@@ -1,35 +1,139 @@
-﻿@model Models.Models.Category
+﻿@using System.Data
+@model Models.Models.Category
 
 @{
     ViewBag.Title = "Add Category";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-@using (Html.BeginForm("Insert", "Categories", FormMethod.Post, new {enctype = "multipart/form-data"}))
+@section Styles
 {
-    <table>
-        <tr>
-            <td>@Html.LabelFor(c => c.Code)</td>
-            <td>@Html.TextBoxFor(c => c.Code)</td>
-        </tr>
-        <tr>
-            <td>@Html.LabelFor(c => c.Name)</td>
-            <td>@Html.TextBoxFor(c => c.Name)</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="Add"/>
-            </td>
-        </tr>
-    </table>
-    
-    
+    <style>
+        #tableStyle {
+            margin: 0 auto;
+        }
+
+        #padding {
+            padding: 5px 0px;
+        }
+
+        #btnStyle {
+            margin: 0px 0px 10px 0px;
+        }
 
 
-    
+    </style>
+
 }
+
+
+<!--Message-->
+@if (ViewBag.SMsg != null)
+{
+    <p class="text-success text-center">@ViewBag.SMsg</p>
+}
+else if (ViewBag.FMsg != null)
+{
+    <p class="text-danger text-center">@ViewBag.FMsg</p>
+}
+
+
+
+
+<div class="container container-fluid">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <button type="button" class="btn btn-info" id="btnStyle" data-toggle="modal" data-target="#entryModal" ><span class="glyphicon glyphicon-plus"></span> Add New</button>
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Sl</th>
+                <th>Code</th>
+                <th>Name</th>
+            </tr>
+            </thead>
+
+        </table>
+
+        <!-- Modal -->
+        <div id="entryModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Insert Category</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        @using (Html.BeginForm("Insert", "Categories", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <table id="tableStyle">
+                                <tr>
+                                    <td id="padding">@Html.LabelFor(c => c.Code)</td>
+                                    <td id="padding">@Html.TextBoxFor(c => c.Code)</td>
+                                </tr>
+                                <tr>
+                                    <td id="padding">@Html.LabelFor(c => c.Name)</td>
+                                    <td id="padding">@Html.TextBoxFor(c => c.Name)</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right" id="padding">
+                                        <input type="submit" value="Add" />
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        }
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        @*<div class="panel panel-info">
+            <div class="panel-heading panel-title">Category Insert</div>
+            <div class="panel-body">
+                @using (Html.BeginForm("Insert", "Categories", FormMethod.Post, new {enctype = "multipart/form-data"}))
+                {
+                    <table id="tableStyle">
+                        <tr>
+                            <td id="padding">@Html.LabelFor(c => c.Code)</td>
+                            <td id="padding">@Html.TextBoxFor(c => c.Code)</td>
+                        </tr>
+                        <tr>
+                            <td id="padding">@Html.LabelFor(c => c.Name)</td>
+                            <td id="padding">@Html.TextBoxFor(c => c.Name)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-right" id="padding">
+                                <input type="submit" value="Add"/>
+                            </td>
+                        </tr>
+                    </table>
+                }
+
+            </div>
+        </div>*@
+    </div>
+    <div class="col-md-2"></div>
+
+</div>
+
+
 
 
 @*<div class="modal fade" id="categoryModal">

@@ -11,6 +11,13 @@ namespace WebApplication.Controllers
     public class CategoriesController : Controller
     {
         private CategoryBll _category = new CategoryBll();
+
+        public ActionResult Insert()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Insert(Category category)
         {
             try
@@ -24,5 +31,21 @@ namespace WebApplication.Controllers
             }
             return View();
         }
+
+
+        //public ActionResult Show()
+        //{
+        //    try
+        //    {
+        //        var categoryList = _category.CategoryList();
+                
+        //        return View(categoryList);
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        ViewBag.FSmg = exception.Message;
+        //    }
+        //}
+
 	}
 }

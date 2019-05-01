@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,21 @@ namespace BLL.BLL
             {
                 throw new Exception("Insert Faild...\nPlease try again.");
             }
+        }
+
+        public DataTable CategoryList()
+        {
+            try
+            {
+                var dataTable = _category.CategoryList();
+                return dataTable;
+
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("Data not found...");
+            }
+            
         }
     }
 }
