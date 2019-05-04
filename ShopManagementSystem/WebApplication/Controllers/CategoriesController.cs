@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using BLL.BLL;
 using Models.Models;
+using PagedList;
+
 
 namespace WebApplication.Controllers
 {
@@ -33,21 +35,30 @@ namespace WebApplication.Controllers
         }
 
 
-        public ActionResult ShowAll()
+        public ActionResult ShowAll(int page=1, int pageSize=4)
         {
             List<Category> categoryList = null;
-            try
-            {
-                categoryList = _category.CategoryList();
+            categoryList = _category.CategoryList();
 
-
-            }
-            catch (Exception exception)
-            {
-                ViewBag.FSmg = exception.Message;
-            }
-            return View(categoryList);
+            PagedList<Category> model=new PagedList<Category>(categoryList,page,pageSize);
+            return View(model);
         }
+
+        //public ActionResult ShowAll()
+        //{
+        //    List<Category> categoryList = null;
+        //    try
+        //    {
+        //        categoryList = _category.CategoryList();
+
+
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        ViewBag.FSmg = exception.Message;
+        //    }
+        //    return View(categoryList);
+        //}
 
         //public ActionResult ShowAll()
         //{

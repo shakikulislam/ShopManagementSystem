@@ -10,11 +10,13 @@
 {
     <style>
         #tableStyle {
+
             margin: 0 auto;
+            margin-bottom: 50px;
         }
 
         #padding {
-            padding: 5px 0px;
+            padding: 5px 20px 5px 0px;
         }
 
         #btnStyle {
@@ -102,15 +104,15 @@ else if (ViewBag.FMsg != null)
                     <table id="tableStyle">
                         <tr>
                             <td id="padding">@Html.LabelFor(c => c.Code)</td>
-                            <td id="padding">@Html.TextBoxFor(c => c.Code)</td>
+                            <td id="">@Html.TextBoxFor(c => c.Code)</td>
                         </tr>
                         <tr>
                             <td id="padding">@Html.LabelFor(c => c.Name)</td>
-                            <td id="padding">@Html.TextBoxFor(c => c.Name)</td>
+                            <td id="">@Html.TextBoxFor(c => c.Name)</td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td class="text-right" id="padding">
+                            <td class="text-right">
                                 <input type="submit" value="Add" />
                             </td>
                         </tr>

@@ -22,3 +22,7 @@ E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\bin
 E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
 E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\obj\Debug\WebApplication.dll
 E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\obj\Debug\WebApplication.pdb
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\bin\PagedList.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\bin\PagedList.Mvc.dll
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\bin\PagedList.xml
+E:\My Create\VS2013\ShopManagementSystem\ShopManagementSystem\WebApplication\bin\PagedList.Mvc.xml

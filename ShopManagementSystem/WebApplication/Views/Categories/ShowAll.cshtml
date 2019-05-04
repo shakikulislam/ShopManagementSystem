@@ -1,5 +1,10 @@
 ﻿
-@model List<Models.Models.Category>
+@model PagedList.IPagedList<Models.Models.Category>
+@using PagedList.Mvc
+
+@*@model List<Models.Models.Category>*@
+
+
 
 @{
     ViewBag.Title = "ShowAll";
@@ -10,14 +15,14 @@
 @if (Model != null && Model.Count >= 0)
 {
     var sl = 0;
-    <table class="table table-striped table-condensed table-bordered table-hover" >
+    <table class="table table-striped table-condensed table-bordered table-hover">
         <thead>
-            <tr>
-                <th>Sl</th>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Action</th>
-            </tr>
+        <tr>
+            <th>Sl</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
         </thead>
         <tbody>
         @foreach (var aCategory in Model)
@@ -34,6 +39,13 @@
             </tr>
         }
         </tbody>
+
     </table>
+    <div >
+        @Html.PagedListPager(Model, page => Url.Action("Insert", new { page, pageSize = Model.PageSize }),new PagedListRenderOptions(){DisplayPageCountAndCurrentLocation = true})
+
+
+        @*Showing @Model.FirstItemOnPage to @Model.LastItemOnPage of @Model.TotalItemCount*@
+    </div>
 }
 
