@@ -1,0 +1,39 @@
+﻿
+@model List<Models.Models.Category>
+
+@{
+    ViewBag.Title = "ShowAll";
+    Layout = null;
+}
+
+
+@if (Model != null && Model.Count >= 0)
+{
+    var sl = 0;
+    <table class="table table-striped table-condensed table-bordered table-hover" >
+        <thead>
+            <tr>
+                <th>Sl</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var aCategory in Model)
+        {
+            <tr>
+                <td style="width: 10%">@(++sl)</td>
+                <td style="width: 15%">@aCategory.Code</td>
+                <td>@aCategory.Name</td>
+                <td style="width: 15%; text-align: center">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    <span class="glyphicon glyphicon-trash" ></span>
+                    
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+

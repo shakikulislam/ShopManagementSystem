@@ -101,6 +101,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\ManualScripts\Category\InsertCategory.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +121,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Categories\Insert.cshtml" />
     <Content Include="Views\Homes\Index.cshtml" />
+    <Content Include="Views\Categories\ShowAll.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

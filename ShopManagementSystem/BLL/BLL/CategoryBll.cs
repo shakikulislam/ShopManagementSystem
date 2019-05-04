@@ -24,12 +24,12 @@ namespace BLL.BLL
             }
         }
 
-        public DataTable CategoryList()
+        public List<Category> CategoryList()
         {
             try
             {
-                var dataTable = _category.CategoryList();
-                return dataTable;
+                var categorys = _category.CategoryList();
+                return categorys;
 
             }
             catch (Exception exception)

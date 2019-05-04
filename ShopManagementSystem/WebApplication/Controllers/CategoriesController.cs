@@ -33,19 +33,44 @@ namespace WebApplication.Controllers
         }
 
 
-        //public ActionResult Show()
+        public ActionResult ShowAll()
+        {
+            List<Category> categoryList = null;
+            try
+            {
+                categoryList = _category.CategoryList();
+
+
+            }
+            catch (Exception exception)
+            {
+                ViewBag.FSmg = exception.Message;
+            }
+            return View(categoryList);
+        }
+
+        //public ActionResult ShowAll()
         //{
-        //    try
-        //    {
-        //        var categoryList = _category.CategoryList();
-                
-        //        return View(categoryList);
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        ViewBag.FSmg = exception.Message;
-        //    }
+            
+        //    //try
+        //    //{
+
+        //        return View(GetAllCategories());
+
+
+        //    //}
+        //    //catch (Exception exception)
+        //    //{
+        //    //    ViewBag.FSmg = exception.Message;
+        //    //}
+
         //}
 
-	}
+        //IEnumerable<Category> GetAllCategories()
+        //{
+        //    List<Category> categoriesList = _category.CategoryList();
+        //    return categoriesList;
+        //}
+
+    }
 }

@@ -16,8 +16,10 @@ namespace DAL.DAL
         private static  SqlConnection _sqlConnection=new SqlConnection(_connectionString);
         private SqlCommand _sqlCommand=new SqlCommand("",_sqlConnection);
 
-        private static SqlDataAdapter _sqlDataAdapter;
-        private static DataTable _dataTable;
+        private static SqlDataReader _sqlDataReader;
+        //private static SqlDataAdapter _sqlDataAdapter;
+        //private static DataTable _dataTable;
+
         
         //Insert Database
         public bool Insert(Category category)
@@ -30,15 +32,27 @@ namespace DAL.DAL
         }
 
 
-        public DataTable CategoryList()
+        //Show All Categories
+        public List<Category> CategoryList()
         {
+            List<Category> categories=new List<Category>();
+            
             _sqlConnection.Close();
             _sqlConnection.Open();
-            _sqlCommand.CommandText = "SELECT *FORM Category";
-            _sqlDataAdapter=new SqlDataAdapter(_sqlCommand);
-            _dataTable=new DataTable();
-            _sqlDataAdapter.Fill(_dataTable);
-            return _dataTable;
+            _sqlCommand.CommandText = "SELECT *FROM Category";
+            _sqlDataReader = _sqlCommand.ExecuteReader();
+            var index = 1;
+            while (_sqlDataReader.Read())
+            {
+                var aCategory = new Category();
+                aCategory.Code = _sqlDataReader["Code"].ToString();
+                aCategory.Name = _sqlDataReader["Name"].ToString();
+
+                categories.Add(aCategory);
+                index++;
+            }
+
+            return categories;
 
         }
 
